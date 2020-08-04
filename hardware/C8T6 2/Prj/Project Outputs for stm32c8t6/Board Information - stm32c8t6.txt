@@ -1,0 +1,12 @@
+Board Information Report
+Filename     : E:\zixue\AD\C8T6 2\Pcb\stm32c8t6.PcbDoc
+Date         : 2018/6/18
+Time         : 21:49:14
+Time Elapsed : 00:00:00
+
+Routing Information
+    Routing completion, 100.00%
+    Connections, 120
+    Connections routed, 120
+    Connections remaining, 0
+count : 4

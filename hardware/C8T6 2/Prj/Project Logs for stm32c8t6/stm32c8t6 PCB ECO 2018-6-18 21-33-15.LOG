@@ -1,0 +1,8 @@
+Added Pin To Net: NetName=OLED_D/C Pin=JP1-13
+Added Pin To Net: NetName=OLED_RST Pin=JP1-14
+Added Pin To Net: NetName=OLED_DI Pin=JP1-15
+Added Pin To Net: NetName=OLED_DO Pin=JP1-16
+Added Pin To Net: NetName=OLED_D/C Pin=U2-25
+Added Pin To Net: NetName=OLED_RST Pin=U2-26
+Added Pin To Net: NetName=OLED_DI Pin=U2-27
+Added Pin To Net: NetName=OLED_DO Pin=U2-28

@@ -1,0 +1,19 @@
+Removed Pin From Net: NetName=OLED_D/C Pin=JP1-13
+Removed Pin From Net: NetName=OLED_RST Pin=JP1-14
+Removed Pin From Net: NetName=OLED_DI Pin=JP1-15
+Removed Pin From Net: NetName=OLED_DO Pin=JP1-16
+Removed Pin From Net: NetName=OLED_D/C Pin=U2-25
+Removed Pin From Net: NetName=OLED_RST Pin=U2-26
+Removed Pin From Net: NetName=OLED_DI Pin=U2-27
+Removed Pin From Net: NetName=OLED_DO Pin=U2-28
+Added Pin To Net: NetName=OLED_D/C Pin=JP1-14
+Added Pin To Net: NetName=OLED_RST Pin=JP1-15
+Added Pin To Net: NetName=OLED_DI Pin=JP1-16
+Added Pin To Net: NetName=OLED_DO Pin=JP2-1
+Added Pin To Net: NetName=OLED_D/C Pin=U2-26
+Added Pin To Net: NetName=OLED_RST Pin=U2-27
+Added Pin To Net: NetName=OLED_DI Pin=U2-28
+Added Pin To Net: NetName=OLED_DO Pin=U2-29
+Added Pin To Net: NetName=PTB12 Pin=JP1-13
+Added Pin To Net: NetName=PTB12 Pin=U2-25
+Added Net: Name=PTB12
