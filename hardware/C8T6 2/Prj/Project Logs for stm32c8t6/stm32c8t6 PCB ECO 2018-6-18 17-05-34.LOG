@@ -1,0 +1,17 @@
+Removed Pin From Net: NetName=OSC32_OUT Pin=Y2-1
+Removed Pin From Net: NetName=OSC32_IN Pin=Y2-2
+Removed Member From Class: ClassName=stm32c8t6 Member=Y2
+Change Component Footprint: Designator=C11 Old Footprint=0805_c New Footprint=0603_C
+Change Component Footprint: Designator=C14 Old Footprint=0805_c New Footprint=0603_C
+Change Component Footprint: Designator=C15 Old Footprint=0805_c New Footprint=0603_C
+Change Component Footprint: Designator=R1 Old Footprint=0805_r New Footprint=0603_R
+Change Component Footprint: Designator=R2 Old Footprint=0805_r New Footprint=0603_R
+Change Component Footprint: Designator=R3 Old Footprint=0805_r New Footprint=0603_R
+Change Component Footprint: Designator=R4 Old Footprint=0805_r New Footprint=0603_R
+Change Component Footprint: Designator=R5 Old Footprint=0805_r New Footprint=0603_R
+Change Component Comment : Designator=C14 Old Comment=10 New Comment=10pF
+Change Component Comment : Designator=C15 Old Comment=10 New Comment=10pF
+Added Component: Designator=Y?(3215 2Pin)
+Added Pin To Net: NetName=OSC32_IN Pin=Y?-1
+Added Pin To Net: NetName=OSC32_OUT Pin=Y?-2
+Added Member To Class: ClassName=stm32c8t6 Member=Component Y? XTAL 32.768KHz 2P
