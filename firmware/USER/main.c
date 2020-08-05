@@ -38,7 +38,7 @@ void loading()//开机进度条
 	}
 }
 
-void measure1()//屏幕不刷新的东西
+void measure1()//屏幕不刷新的东西 
 {
 		OLED_Clear();
 		OLED_DrawBMP(96,0,128,2,BMP2);	
