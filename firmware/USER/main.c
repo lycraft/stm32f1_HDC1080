@@ -54,13 +54,6 @@ void measure1()//屏幕不刷新的东西
 		OLED_ShowChar(90,2,'C');
 		OLED_ShowChar(90,4,'%');
 	 
-	 	OLED_ShowCHinese(0,6,0);
-		OLED_ShowCHinese(18,6,1);
-		OLED_ShowCHinese(36,6,2);//的
-		OLED_ShowCHinese(54,6,3);//迷
-		OLED_ShowCHinese(72,6,4);//你
-		OLED_ShowCHinese(90,6,5);//屏
-		OLED_ShowCHinese(108,6,6);//幕
 	
 		OLED_ShowNum(0,0,mode,2,16);
 }
