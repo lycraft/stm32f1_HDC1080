@@ -33,33 +33,33 @@ uint16_t HDC1080_Read_DeviceID(void);
 #define SDA_IN()                                            \
     {                                                       \
         GPIO_InitTypeDef GPIO_InitStruct = {0};             \
-        GPIO_InitStruct.Pin = OLED_DO_Pin;                  \
-        GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;         \
+        GPIO_InitStruct.Pin = IIC_SDA_Pin;                  \
+        GPIO_InitStruct.Mode = GPIO_MODE_INPUT;             \
         GPIO_InitStruct.Pull = GPIO_NOPULL;                 \
         GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;        \
-        HAL_GPIO_Init(OLED_DO_GPIO_Port, &GPIO_InitStruct); \
+        HAL_GPIO_Init(IIC_SDA_GPIO_Port, &GPIO_InitStruct); \
     }
 // SDA设置为输出
 #define SDA_OUT()                                           \
     {                                                       \
         GPIO_InitTypeDef GPIO_InitStruct = {0};             \
-        GPIO_InitStruct.Pin = OLED_DO_Pin;                  \
+        GPIO_InitStruct.Pin = IIC_SDA_Pin;                  \
         GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;         \
         GPIO_InitStruct.Pull = GPIO_NOPULL;                 \
         GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;        \
-        HAL_GPIO_Init(OLED_DO_GPIO_Port, &GPIO_InitStruct); \
+        HAL_GPIO_Init(IIC_SDA_GPIO_Port, &GPIO_InitStruct); \
     }
 
 // IO操作函数
-#define IIC_SCL_HIGH // SCL
-#define IIC_SCL_LOW  // SCL
+#define IIC_SCL_HIGH HAL_GPIO_WritePin(IIC_SCL_GPIO_Port, IIC_SCL_Pin, GPIO_PIN_SET)  // SCL
+#define IIC_SCL_LOW HAL_GPIO_WritePin(IIC_SCL_GPIO_Port, IIC_SCL_Pin, GPIO_PIN_RESET) // SCL
 
-#define IIC_SCL HAL_GPIO_ReadPin(OLED_DO_GPIO_Port,OLED_DO_Pin)// 读IIC
+#define IIC_SCL HAL_GPIO_ReadPin(IIC_SCL_GPIO_Port, IIC_SCL_Pin) // 读IIC
 
-#define IIC_SDA_HIGH // SDA
-#define IIC_SDA_LOW  // SDA
+#define IIC_SDA_HIGH HAL_GPIO_WritePin(IIC_SDA_GPIO_Port, IIC_SDA_Pin, GPIO_PIN_SET)  // SDA
+#define IIC_SDA_LOW HAL_GPIO_WritePin(IIC_SDA_GPIO_Port, IIC_SDA_Pin, GPIO_PIN_RESET) // SDA
 
-#define READ_SDA HAL_GPIO_ReadPin(OLED_DO_GPIO_Port,OLED_DO_Pin) // 输入SDA
+#define READ_SDA HAL_GPIO_ReadPin(IIC_SDA_GPIO_Port, IIC_SDA_Pin) // 输入SDA
 
 // IIC所有操作函数
 void IIC_Init(void);                      // 初始化IIC的IO口

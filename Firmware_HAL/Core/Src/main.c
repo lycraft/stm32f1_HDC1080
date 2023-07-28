@@ -22,7 +22,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "oled.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -43,7 +43,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+static int16_t Temperature, Humidity;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -87,14 +87,38 @@ int main(void)
     MX_GPIO_Init();
     /* USER CODE BEGIN 2 */
     OLED_Init(); // 初始化OLED
-    OLED_ShowChar(32, 4, '>');
     OLED_ShowString(0, 0, (uint8_t *)"Hello!");
+
+    OLED_Clear();
+    OLED_DrawBMP(96, 0, 128, 2, BMP2);
+
+    OLED_ShowCHinese(0, 2, 7);  // 温度
+    OLED_ShowCHinese(18, 2, 8); //
+    OLED_ShowCHinese(0, 4, 9);  // 湿度
+    OLED_ShowCHinese(18, 4, 8); //
+    OLED_ShowChar(37, 2, ':');
+    OLED_ShowChar(37, 4, ':');
+    OLED_ShowChar(71, 2, '.');
+    OLED_ShowChar(71, 4, '.');
+    OLED_ShowChar(90, 2, 'C');
+    OLED_ShowChar(90, 4, '%');
     /* USER CODE END 2 */
 
     /* Infinite loop */
     /* USER CODE BEGIN WHILE */
     while (1)
     {
+        Temperature = HDC1080_Read_Temper();
+        Humidity = HDC1080_Read_Humidi();
+
+        OLED_ShowNum(55, 2, Temperature / 100, 2, 16);
+        OLED_ShowNum(72, 2, Temperature / 10 % 10, 1, 16);
+        OLED_ShowNum(80, 2, Temperature % 10, 1, 16);
+
+        OLED_ShowNum(55, 4, Humidity / 100, 2, 16);
+        OLED_ShowNum(72, 4, Humidity / 10 % 10, 1, 16);
+        OLED_ShowNum(80, 4, Humidity % 10, 1, 16);
+        HAL_Delay(200);
         /* USER CODE END WHILE */
 
         /* USER CODE BEGIN 3 */
